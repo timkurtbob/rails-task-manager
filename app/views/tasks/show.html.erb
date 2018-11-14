@@ -1,0 +1,20 @@
+<h1>Task <%= @task.id %> </h1>
+
+
+<ul class="list-unstyled">
+  <li><b>Status:</b>
+    <% if @task.completed %>
+      <i class="fas fa-check"></i>
+      <% else %>
+      <i class="far fa-circle"></i>
+    <% end %>
+  </li>
+  <li><b>Title:</b> <%= @task.title %></li>
+  <li><b>Details:</b> <%= @task.details %></li>
+</ul>
+<br>
+<%= link_to 'Edit Task', edit_task_path %>
+
+<br>
+
+<%= link_to '<< All Tasks', tasks_path %>
